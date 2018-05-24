@@ -11,7 +11,7 @@ public class Door : MonoBehaviour {
 	public AudioClip open, close;
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1")) {
+		if (Input.GetButtonDown("Fire2")) {
 			if (openevent != null)
 				StartCoroutine (openevent());
 		}
@@ -47,8 +47,8 @@ public class Door : MonoBehaviour {
 		}
 	}
 	void OnTriggerExit(Collider col){
-		StopAllCoroutines ();
-		StartCoroutine(Closing());
+		//StopAllCoroutines ();
+		//StartCoroutine(Closing());
 		openevent = null;
 	}
 }
