@@ -13,7 +13,10 @@ public class ActionControl : MonoBehaviour {
     }
     public void SetEvent(Vector3 position)
     {
-        eventcallback(position);
+        if (eventcallback != null)
+        {
+            eventcallback(position);
+        }
         lasteventposition =position;
     }
 	

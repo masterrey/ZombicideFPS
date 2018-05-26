@@ -34,9 +34,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 character.Move(Vector3.zero, false, false);
         }
 
+        public void Stop()
+        {
+            agent.isStopped = true;
+            character.Move(Vector3.zero, false, false);
+            this.target = Vector3.zero;
+            agent.SetDestination(target);
+        }
 
         public void SetTarget(Vector3 target)
         {
+            agent.isStopped = false;
             this.target = target;
         }
 

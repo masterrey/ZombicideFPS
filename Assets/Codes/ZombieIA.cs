@@ -39,8 +39,10 @@ public class ZombieIA : MonoBehaviour
                 if (actionpassed == actions)
                 {
                     actionpassed = 0;
-                    aichar.SetTarget(other.transform.position);
+                    aichar.Stop();
+                    //aichar.SetTarget(transform.position);
                 }
+                lasttilingpos = other.transform.position;
             }
         }
     }
